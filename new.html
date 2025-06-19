@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Showcase</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <video src="loader.mp4" autoplay muted loop></video>
+  </div>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" class="theme-toggle">🌓 Toggle Theme</button>
+
+  <!-- Navigation -->
+  <div class="navbar">
+    <div class="logo">FRONTEND-BATTLE</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#customers">Customers</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+<!-- Hero Section -->
+<section class="hero section fade-up" id="home">
+  <h1>Welcome to the AI-Powered Customer Showcase</h1>
+  <video id="homepageVideo" class="hero-video" src="homepage.mp4" autoplay muted loop></video>
+  <div class="video-controls">
+    <button onclick="toggleVideo('homepageVideo')">▶️ Play/Pause</button>
+  </div>
+</section>
+
+<!-- AI Suggestions -->
+<section class="section fade-up">
+  <h2>AI-Powered Suggestions</h2>
+  <button onclick="fetchGeminiSuggestions()">💡 Get AI Suggestions</button>
+  <div id="aiSuggestions" style="margin-top: 10px;"></div>
+</section>
+
+<!-- Customer Section -->
+<section class="section fade-up" id="customers">
+  <h2>Our Trusted Customers</h2>
+  <div class="customers-grid">
+    <div class="customer-card">
+      <img src="cards.png" alt="Customer 1" class="customer-img" />
+      <h3>ABC Corp</h3>
+      <p>AI-driven solutions for enterprise growth</p>
+    </div>
+    <div class="customer-card">
+      <img src="cards.png" alt="Customer 2" class="customer-img" />
+      <h3>XYZ Ltd</h3>
+      <p>Innovative tech with advanced analytics</p>
+    </div>
+    <div class="customer-card">
+      <img src="cards.png" alt="Customer 3" class="customer-img" />
+      <h3>MegaTech</h3>
+      <p>Transforming industries with automation</p>
+    </div>
+  </div>
+</section>
+
+<!-- Feature Services Carousel -->
+<section class="section fade-up" id="services">
+  <h2>Feature Services</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">💼 Consulting</div>
+      <div class="swiper-slide">🛠 Development</div>
+      <div class="swiper-slide">📈 Marketing</div>
+    </div>
+  </div>
+  <video class="section-video" src="caraousel-switch.mp4" autoplay muted loop></video>
+</section>
+
+<!-- Testimonials Chart -->
+<section class="section fade-up" id="testimonials">
+  <h2>Customer Satisfaction</h2>
+  <img src="graph.png" alt="Satisfaction Graph" class="graph-img" />
+</section>
+
+<!-- Voice Search -->
+<section class="section fade-up">
+  <h2>Voice Assistant</h2>
+  <input type="text" id="voiceInput" placeholder="Speak to search..." />
+  <button onclick="startListening()">🎤 Speak</button>
+</section>
+
+<!-- Contact Form -->
+<section class="section fade-up" id="contact">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Empowering Innovation with AI Tools</h2>
+    <p>We use OpenAI GPT-4, Gemini, Claude, and other LLMs for efficient code generation and intelligent automation—freely accessible in our showcase.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 AI Customer Showcase. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
